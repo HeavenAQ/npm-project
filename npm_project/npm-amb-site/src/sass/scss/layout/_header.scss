@@ -1,0 +1,21 @@
+header {
+	//image
+	background-image: linear-gradient(
+		to bottom right,
+		rgba($primary-main, .9),
+		rgba($primary-main, .5),
+	), url('../images/hero.jpg');
+	background-size: cover;
+	background-position: bottom;
+
+	//position
+	margin: 9.5vh auto;
+	position: relative;
+	
+	//size
+	height: 85vh;
+	width: 95%;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+
+}

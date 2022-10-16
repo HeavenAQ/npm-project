@@ -1,0 +1,97 @@
+@keyframes UpIn{
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes RightIn {
+	0% {
+		opacity: 0;
+		overflow: hidden;
+		transform: translateX(20%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(10%);
+	}
+}
+
+@keyframes FadeIn {
+  from {
+	opacity: 0;
+	transform: translateY(-20px);
+  }
+  to {
+	opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+@keyframes FadeOut {
+  from {
+	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+	transform: translateY(-20px);
+	opacity: 0;
+  }
+}
+
+@keyframes Jump {
+	25% {
+		transform: translateY(-8px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateY(-5px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes GradShow {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes GradVanish {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.fade-in {
+  animation: 0.5s FadeIn forwards;
+}
+
+.fade-out {
+  animation: 0.5s FadeOut forwards;
+}
+
+.grad-in {
+	animation: 0.5s GradShow forwards;
+}

@@ -1,0 +1,53 @@
+.theme__icon {
+	&--container {
+		width: 7rem;
+		height: 3.4rem;
+		background-color: $primary-yellow;
+		border-radius: 3rem;
+		position: relative;
+		cursor: pointer;
+		color: $font-dark;
+
+		&--dark {
+			transition: all .4s;
+			background-color: $font-gray;
+		}
+	}
+	
+	&--light {
+		height: 3.2rem;
+		width: 3.2rem;
+		color: $primary-main;
+		border-radius: 5rem;
+		position: absolute;
+		top: 50%;
+		left: .1rem;
+		transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+
+	&--dark {
+		height: 3.2rem;
+		width: 3.2rem;
+		border-radius: 5rem;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: rotate(-25deg) translate(19%, -46%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+
+	&--active {
+		transition: all .4s;
+		color: $font-dark;
+		background-color: $primary-main;
+	}
+
+}
+

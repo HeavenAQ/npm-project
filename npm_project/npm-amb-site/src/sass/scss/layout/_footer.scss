@@ -1,0 +1,42 @@
+footer {
+	display: block;
+	text-align: center;
+	margin-top: 20rem;
+	height: 20rem;
+	width: 100%;
+	padding-top: 5.5rem; 
+	background-color: $primary-green-light;
+}
+
+.footer {
+	&__icons {
+		//position
+		margin: 0 auto 6rem auto;
+
+		//display
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 3rem;
+
+		//size
+		height: 3rem;
+		width: 50%;
+
+		&>a {
+			&:hover {
+				border-bottom: 2px solid $primary-main;
+			}
+		}
+	}
+
+	&__text {
+		border-top: 2px solid $font-gray;
+		padding-top: 3rem;
+	}
+
+}
+
+.footer--dark {
+	background-color: $primary-main-dark;	
+}

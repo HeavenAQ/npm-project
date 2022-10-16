@@ -1,0 +1,16 @@
+.msg__container {
+	position: fixed;
+	right: 3rem;
+	bottom: 2vh;
+	font-size: 5rem;
+	transition: all .2s;
+	cursor: pointer;
+
+	&:hover {
+		transform: translateY(-3px);
+	}
+
+	&:active {
+		transform: translateY(-1px);
+	}
+}

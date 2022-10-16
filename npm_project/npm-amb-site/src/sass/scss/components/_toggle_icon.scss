@@ -1,0 +1,60 @@
+.nav__toggle {
+	display: none;
+	@include respond(tab-land){
+		position: relative;
+		display: flex;
+		height: 4rem;
+		width: 3.2rem;
+		border-radius: 1rem;
+		align-items: center;
+		justify-content: flex-end;
+		cursor: pointer;
+		overflow: hidden;
+		z-index: 10;
+
+		&>span {
+			position: absolute;
+			width: 3rem;
+			height: .4rem;
+			border-radius: 1rem;
+			background: $font-gray;
+			transition: all .25s;
+		}
+
+		&>span:nth-child(1) {
+			transform: translateY(-1rem);
+		}
+
+		&>span:nth-child(3){
+			transform: translateY(1rem);
+		}
+
+		&.hover span:nth-child(1){
+			transform: translateY(-8px);
+		}
+
+		&.hover span:nth-child(3){
+			transform: translateY(8px);
+		}
+
+		&.active span:nth-child(1){
+			transform: rotate(-30deg);
+		}
+
+		&.active span:nth-child(2){
+			opacity: 0;
+		}
+		
+		&.active span:nth-child(3){
+			transform: rotate(30deg);
+		}
+		
+		&.active.hover span:nth-child(1) {
+			transform: rotate(-45deg);
+		}
+
+		&.active.hover span:nth-child(3) {
+			transform: rotate(45deg);
+		}
+	}
+}
