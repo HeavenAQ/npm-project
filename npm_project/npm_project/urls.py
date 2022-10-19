@@ -22,5 +22,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include('npm_articles.urls')),
-    re_path('^([airw].*)*$', TemplateView.as_view(template_name="index.html")),
+    re_path('^([airw][^dp].*)*$', TemplateView.as_view(template_name="index.html")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
