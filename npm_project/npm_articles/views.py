@@ -11,31 +11,13 @@ def get_routes(request):
             'Endpoint': '/articles/',
             'method': 'GET',
             'body': None,
-            'description': 'Returns an array of notes'
+            'description': 'Returns an array of articles'
         },
         {
-            'Endpoint': '/articles/id',
+            'Endpoint': '/articles/<page_name>',
             'method': 'GET',
             'body': None,
             'description': 'Returns a single note object'
-        },
-        {
-            'Endpoint': '/articles/create/',
-            'method': 'POST',
-            'body': {'body': ""},
-            'description': 'Creates new note with data sent in post request'
-        },
-        {
-            'Endpoint': '/articles/id/update/',
-            'method': 'PUT',
-            'body': {'body': ""},
-            'description': 'Creates an existing note with data sent in post request'
-        },
-        {
-            'Endpoint': '/articles/id/delete/',
-            'method': 'DELETE',
-            'body': None,
-            'description': 'Deletes and exiting note'
         },
     ]
 
