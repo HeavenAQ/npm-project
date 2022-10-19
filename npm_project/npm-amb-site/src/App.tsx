@@ -4,7 +4,6 @@ import Navbar from './layout/Navbar';
 import Header from './layout/Header';
 import RoutingTable from './RoutingTable';
 import Footer from './layout/Footer';
-import ChatBot from './components/ChatBot';
 
 const App: React.FC = (): JSX.Element => {
 	const [lang, setLang] = useState<Language>(Language.chn);
@@ -20,7 +19,6 @@ const App: React.FC = (): JSX.Element => {
 			<Navbar lang={lang} changeLang={changeLang} />
 			<Header />
 			<RoutingTable lang={lang} changeLang={changeLang} />
-			<ChatBot/>
 			<Footer />
 		</div>
 	)
