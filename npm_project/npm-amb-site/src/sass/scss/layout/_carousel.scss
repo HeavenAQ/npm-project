@@ -1,35 +1,35 @@
 .embla {
-    position: relative;
-    max-width: 67rem;
-    margin-left: auto;
-    margin-right: auto;
+	position: relative;
+	max-width: 67rem;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	font-size: 2rem;
-    height: 80vh;
+	height: 80vh;
 	margin-top: 35rem;
 	@include respond(phone) {
 		margin-top: 7rem;
 	}
-	
-	&>h2 {
+
+	& > h2 {
 		@include absCenter;
 		top: 5%;
 	}
 
-    &__viewport {
-        overflow: hidden;
-        width: 100%;
+	&__viewport {
+		overflow: hidden;
+		width: 100%;
 
-        &.is-draggable {
+		&.is-draggable {
 			cursor: move;
 			cursor: grab;
-        }
+		}
 
-        &.is-draggable {
+		&.is-draggable {
 			cursor: move;
 			cursor: grab;
-        }
-    }
+		}
+	}
 
 	&__container {
 		display: flex;
@@ -44,7 +44,7 @@
 		position: relative;
 		min-width: 100%;
 		padding-left: 10px;
-		
+
 		&__inner {
 			position: relative;
 			overflow: hidden;
@@ -82,7 +82,7 @@
 		margin-left: 7.5px;
 		display: flex;
 		align-items: center;
-		
+
 		&:after {
 			background-color: #efefef;
 			width: 100%;

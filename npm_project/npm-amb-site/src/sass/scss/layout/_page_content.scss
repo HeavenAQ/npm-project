@@ -7,10 +7,10 @@ main {
 }
 
 .content--no-img {
-	width: 85%;	
+	width: 85%;
 }
 
-.content{
+.content {
 	&__container {
 		width: 90%;
 		display: grid;
@@ -33,7 +33,7 @@ main {
 		&.left {
 			justify-self: start;
 			margin-left: 15%;
-			@include respond(tab-land){
+			@include respond(tab-land) {
 				height: 25rem;
 				width: 25rem;
 				border-radius: 25rem;
@@ -47,6 +47,4 @@ main {
 			margin-right: 15%;
 		}
 	}
-
-
 }

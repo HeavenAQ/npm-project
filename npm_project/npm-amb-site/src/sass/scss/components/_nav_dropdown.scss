@@ -21,7 +21,7 @@
 			padding-top: 13vh;
 			background-color: $primary-main;
 
-			@include respond(phone){
+			@include respond(phone) {
 				row-gap: 2rem;
 			}
 		}
@@ -29,14 +29,14 @@
 
 	&__logo {
 		background-color: $primary-green-light;
-		box-shadow: 4px 6px 10px rgba($font-gray, .8);
+		box-shadow: 4px 6px 10px rgba($font-gray, 0.8);
 		position: relative;
 		width: 12rem;
 		height: 12rem;
 		border-radius: 12rem;
 		margin: 0 auto 3rem auto;
 
-		@include respond(phone){
+		@include respond(phone) {
 			min-width: 5rem;
 			min-height: 5rem;
 			border-radius: 7rem;
@@ -44,15 +44,14 @@
 		}
 
 		&:hover {
-			animation: .5s Jump;
+			animation: 0.5s Jump;
 		}
 
-
-		&>img {
+		& > img {
 			margin: 0;
 			position: absolute;
 			left: -2.5rem;
-			@include respond(phone){
+			@include respond(phone) {
 				width: 20rem;
 			}
 		}
@@ -62,12 +61,11 @@
 		width: 25rem;
 		margin: 0 auto;
 		cursor: pointer;
-		text-shadow: 2px 4px 10px rgba($font-gray, .6);
+		text-shadow: 2px 4px 10px rgba($font-gray, 0.6);
 		background-clip: text;
 
 		&:hover {
-			animation: .5s Jump;
+			animation: 0.5s Jump;
 		}
 	}
-
 }

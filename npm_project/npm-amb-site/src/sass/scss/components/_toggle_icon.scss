@@ -1,6 +1,6 @@
 .nav__toggle {
 	display: none;
-	@include respond(tab-land){
+	@include respond(tab-land) {
 		position: relative;
 		display: flex;
 		height: 4rem;
@@ -12,43 +12,43 @@
 		overflow: hidden;
 		z-index: 10;
 
-		&>span {
+		& > span {
 			position: absolute;
 			width: 3rem;
-			height: .4rem;
+			height: 0.4rem;
 			border-radius: 1rem;
 			background: $font-gray;
-			transition: all .25s;
+			transition: all 0.25s;
 		}
 
-		&>span:nth-child(1) {
+		& > span:nth-child(1) {
 			transform: translateY(-1rem);
 		}
 
-		&>span:nth-child(3){
+		& > span:nth-child(3) {
 			transform: translateY(1rem);
 		}
 
-		&.hover span:nth-child(1){
+		&.hover span:nth-child(1) {
 			transform: translateY(-8px);
 		}
 
-		&.hover span:nth-child(3){
+		&.hover span:nth-child(3) {
 			transform: translateY(8px);
 		}
 
-		&.active span:nth-child(1){
+		&.active span:nth-child(1) {
 			transform: rotate(-30deg);
 		}
 
-		&.active span:nth-child(2){
+		&.active span:nth-child(2) {
 			opacity: 0;
 		}
-		
-		&.active span:nth-child(3){
+
+		&.active span:nth-child(3) {
 			transform: rotate(30deg);
 		}
-		
+
 		&.active.hover span:nth-child(1) {
 			transform: rotate(-45deg);
 		}

@@ -4,9 +4,9 @@ footer {
 	margin-top: 20rem;
 	height: 20rem;
 	width: 100%;
-	padding-top: 5.5rem; 
+	padding-top: 5.5rem;
 	background-color: $primary-green-light;
-	@include respond(phone){
+	@include respond(phone) {
 		margin-top: 10rem;
 	}
 }
@@ -26,7 +26,7 @@ footer {
 		height: 3rem;
 		width: 50%;
 
-		&>a {
+		& > a {
 			&:hover {
 				border-bottom: 2px solid $primary-main;
 			}
@@ -37,9 +37,8 @@ footer {
 		border-top: 2px solid $font-gray;
 		padding-top: 3rem;
 	}
-
 }
 
 .footer--dark {
-	background-color: $primary-main-dark;	
+	background-color: $primary-main-dark;
 }

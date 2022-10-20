@@ -1,6 +1,6 @@
 .lang-switch {
 	&__container {
-		//position 
+		//position
 		margin: 2rem auto 0 auto;
 
 		//display
@@ -14,7 +14,7 @@
 		width: 10rem;
 		height: 3.3rem;
 		border-radius: 3rem;
-		padding: .4rem;
+		padding: 0.4rem;
 		border: 2px solid $font-dark;
 
 		//text settings
@@ -22,7 +22,7 @@
 		font-size: 2rem;
 
 		//animation
-		transition: all .2s;
+		transition: all 0.2s;
 		&:hover {
 			transform: translateY(-3px);
 		}

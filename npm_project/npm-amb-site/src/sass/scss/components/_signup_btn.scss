@@ -2,13 +2,13 @@
 	width: 10rem;
 	border-bottom: 3px solid $primary-green;
 	margin-top: 3rem;
-	
+
 	font-size: 2rem;
 	font-weight: 500;
 	text-align: center;
 	cursor: pointer;
-	transition: all .2s;
-	padding: .5rem;
+	transition: all 0.2s;
+	padding: 0.5rem;
 	@include unselectable;
 
 	&:hover {
@@ -19,6 +19,6 @@
 	}
 
 	&:active {
-		transform: translateY(-1px)
+		transform: translateY(-1px);
 	}
 }
