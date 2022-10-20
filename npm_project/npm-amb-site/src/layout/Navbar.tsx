@@ -29,7 +29,7 @@ const Navbar: React.FC<LanguageSettings> = ({ lang, changeLang }): JSX.Element =
 	const navItems: Page[] = [
 		{ chn: '關於我們', eng: 'about', route: 'about', page: PageIndex.about },
 		{ chn: '展覽簡介', eng: 'introduction', route: 'intro', page: PageIndex.intro },
-		{ chn: '專場導覽', eng: 'guide', route: 'recommendations', page: PageIndex.recommendations },
+		{ chn: '專場導覽', eng: 'guided tours', route: 'recommendations', page: PageIndex.recommendations },
 		{ chn: '繪畫工作坊', eng: 'workshop', route: 'workshop', page: PageIndex.workshop }
 	];
 

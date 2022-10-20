@@ -1,6 +1,11 @@
-import { getArticles, RenderData } from '../utils/utils';
+import { getArticles, isChinese, DataWithLang } from '../utils/utils';
+import Carousel from './Carousel';
+import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
 
-const RecommendPage: React.FC<RenderData> = ({ data }): JSX.Element => {
+
+const SLIDE_COUNT = 2;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
+const RecommendPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
 	const articleList = articleData.map((e, i) => {
 		return (
@@ -18,6 +23,15 @@ const RecommendPage: React.FC<RenderData> = ({ data }): JSX.Element => {
 	return (
 		<main className='content--no-img'>
 			{articleList}
+			<div className="signup__btn">
+				{!isChinese(lang) ? "現在報名" : "Sign up"}!
+			</div>
+			<Carousel 
+				lang={lang} 
+				slides={slides} 
+				mediaByIndex={introMediaByIndex}
+			/>
+
 		</main>
 	)
 }

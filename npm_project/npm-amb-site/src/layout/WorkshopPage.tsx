@@ -1,8 +1,9 @@
-import { getArticles, isChinese, Language, RenderData } from '../utils/utils';
+import { getArticles, isChinese, DataWithLang } from '../utils/utils';
+import Carousel from './Carousel';
+import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
 
-interface DataWithLang extends RenderData {
-	lang: Language;
-}
+const SLIDE_COUNT = 2;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
@@ -25,6 +26,12 @@ const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 			<div className="signup__btn">
 				{!isChinese(lang) ? "現在報名" : "Sign up"}!
 			</div>
+			<Carousel 
+				lang={lang} 
+				slides={slides} 
+				mediaByIndex={introMediaByIndex}
+			/>
+
 		</main>
 	)
 }

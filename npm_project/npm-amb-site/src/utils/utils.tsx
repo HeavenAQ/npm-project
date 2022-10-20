@@ -38,3 +38,7 @@ export interface PageSettings {
 export interface RenderData {
 	data: object[];
 }
+
+export interface DataWithLang extends RenderData {
+	lang: Language;
+}

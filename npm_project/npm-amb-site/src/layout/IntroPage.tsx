@@ -1,6 +1,12 @@
-import { getArticles, RenderData } from '../utils/utils';
+import { getArticles, isChinese, DataWithLang } from '../utils/utils';
+import Carousel from './Carousel';
+import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
 
-const IntroPage: React.FC<RenderData> = ({ data }): JSX.Element => {
+
+const SLIDE_COUNT = 5;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
+
+const IntroPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
 	const articleList = articleData.map((e, i) => {
 		return (
@@ -20,6 +26,16 @@ const IntroPage: React.FC<RenderData> = ({ data }): JSX.Element => {
 	return (
 		<main className='content--no-img'>
 			{articleList}
+			{
+				!isChinese(lang)
+					? 	<Carousel 
+							lang={lang} 
+							slides={slides} 
+							mediaByIndex={introMediaByIndex}
+						/>
+					: <></>
+
+			}
 		</main>
 	)
 }

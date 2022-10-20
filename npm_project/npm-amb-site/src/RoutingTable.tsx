@@ -15,7 +15,6 @@ const RoutingTable: React.FC<LanguageSettings> = ({ lang }): JSX.Element => {
 
 	useEffect(() => {
 		(async () => {
-			console.log(curLocation.pathname);
 			const res = (location.pathname !== '/')
 				? await fetch(`/api/articles${curLocation.pathname}/`)
 				: await fetch(`/api/articles/intro/`)
@@ -51,10 +50,10 @@ const RoutingTable: React.FC<LanguageSettings> = ({ lang }): JSX.Element => {
 			onAnimationEnd={changeContent}
 		>
 			<Routes location={curLocation}>
-				<Route path='/' element={<IntroPage data={cleanData()} />} />
+				<Route path='/' element={<IntroPage data={cleanData()} lang={lang}/>} />
 				<Route path="/about" element={<AboutPage data={cleanData()} />}></Route>
-				<Route path="/intro" element={<IntroPage data={cleanData()} />}></Route>
-				<Route path="/recommendations" element={<RecommendPage data={cleanData()} />}></Route>
+				<Route path="/intro" element={<IntroPage data={cleanData()} lang={lang}/>}></Route>
+				<Route path="/recommendations" element={<RecommendPage data={cleanData()} lang={lang}/>}></Route>
 				<Route path="/workshop" element={<WorkshopPage data={cleanData()} lang={lang}/>}></Route>
 			</Routes>
 		</div>

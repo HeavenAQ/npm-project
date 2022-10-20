@@ -18,7 +18,10 @@ const App: React.FC = (): JSX.Element => {
 		<div className='app-container'>
 			<Navbar lang={lang} changeLang={changeLang} />
 			<Header />
-			<RoutingTable lang={lang} changeLang={changeLang} />
+			<RoutingTable 
+				lang={lang} 
+				changeLang={changeLang} 
+			/>
 			<Footer />
 		</div>
 	)

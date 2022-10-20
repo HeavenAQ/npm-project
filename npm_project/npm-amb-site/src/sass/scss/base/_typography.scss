@@ -90,6 +90,7 @@ p {
 
 .secondary__heading {
 	font-size: 3rem;
+	font-weight: 700;
 	margin-bottom: 3rem;
 	letter-spacing: .5rem;
 	color: $primary-main;
@@ -97,6 +98,7 @@ p {
 	background-color: $primary-green-regular;
 	padding: 1rem;
 	border-radius: 2rem;
+	@include respond(tab-land){ font-size: 2.5rem; }
 }
 
 .tertiary__heading {
@@ -107,6 +109,7 @@ p {
 	white-space: nowrap;
 	letter-spacing: 1rem;
 	animation: GradShow ease-out 3s;
+	color: $font-gray;
 	
 	@include respond(tab-land){
 		font-size: 1.5rem;
