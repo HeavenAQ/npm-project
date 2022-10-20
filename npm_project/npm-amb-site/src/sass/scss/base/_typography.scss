@@ -38,7 +38,7 @@ p {
 	@include unselectable;
 	width: 100%;
 	text-align: center;
-	letter-spacing: 20px;
+	letter-spacing: 2rem;
 	animation: UpIn ease-out 2s;
 	color: $primary-green-dark;
 	@include respond(tab-land) {
@@ -47,12 +47,16 @@ p {
 
 	&--sub {
 		color: $primary-green;
-		display: block;
-		transform: translate(10%, -3rem);
+		@include absCenter;
+		left: 60%;
+		top: 50%;
+		letter-spacing: 2rem;
+		white-space: nowrap;
 		animation: RightIn ease-out 1.5s;
 		@include respond(tab-land){ 
 			font-size: 1.5rem; 
-			transform: translateX(1rem);
+			left: 50%;
+			top: 51.3%;
 		}
 	}
 	
@@ -115,6 +119,7 @@ p {
 		font-size: 1.5rem;
 		letter-spacing: .5rem;
 		left: 53%;
+		top: 80%;
 	}
 }
 
@@ -126,4 +131,3 @@ p {
 		font-size: 1rem;
 	}
 }
-

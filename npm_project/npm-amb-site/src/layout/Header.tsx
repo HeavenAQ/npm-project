@@ -6,8 +6,8 @@ const Header: React.FC = (): JSX.Element => {
 			<h1 className="primary__heading" unselectable='on'>
 				<span className="primary__heading--main">乾隆</span>
 				<span className="primary__heading--mid">南巡</span>
-				<span className="primary__heading--sub">一場玩味文物的旅行</span>
 			</h1>
+			<h1 className="primary__heading--sub">一場玩味文物的旅行</h1>
 			<div className="primary__heading--location">國立中山大學</div>
 			<h3 className="tertiary__heading">
 				<div>共同主辦 - 國立中山大學圖書與資訊處</div>
