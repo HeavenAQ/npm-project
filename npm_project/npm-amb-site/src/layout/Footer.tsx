@@ -1,6 +1,6 @@
-import React from 'react';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr'
+import React from "react";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 
 const Footer: React.FC = (): JSX.Element => {
 	return (
@@ -24,9 +24,11 @@ const Footer: React.FC = (): JSX.Element => {
 					<GrMail />
 				</a>
 			</div>
-			<span className="footer__text">&copy; 2022 Vivian Chou. All Rights Reserved.</span>
+			<span className="footer__text">
+				&copy; 2022 Vivian Chou. All Rights Reserved.
+			</span>
 		</footer>
-	)
-}
+	);
+};
 
 export default Footer;

@@ -1,6 +1,7 @@
-import { getArticles, isChinese, DataWithLang } from '../utils/utils';
+import { getArticles, DataWithLang } from '../utils/utils';
 import Carousel from './Carousel';
 import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
+import SignupButton from '../components/SignupButton';
 
 
 const SLIDE_COUNT = 2;
@@ -23,9 +24,10 @@ const RecommendPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	return (
 		<main className='content--no-img'>
 			{articleList}
-			<div className="signup__btn">
-				{!isChinese(lang) ? "現在報名" : "Sign up"}!
-			</div>
+			<SignupButton 
+				link='https://forms.gle/BW6H5jFXhL5ybeELA'
+				lang={lang}
+			/>
 			<Carousel 
 				lang={lang} 
 				slides={slides} 

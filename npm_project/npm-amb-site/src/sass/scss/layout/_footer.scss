@@ -6,6 +6,9 @@ footer {
 	width: 100%;
 	padding-top: 5.5rem; 
 	background-color: $primary-green-light;
+	@include respond(phone){
+		margin-top: 10rem;
+	}
 }
 
 .footer {
