@@ -1,11 +1,8 @@
-import { getArticles, DataWithLang } from '../utils/utils';
-import Carousel from './Carousel';
-import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
+import { getArticles, DataWithLang, isChinese } from '../utils/utils';
 import SignupButton from '../components/SignupButton';
+import TapeMedia from '../sass/scss/images/guide/GuideMedia';
 
 
-const SLIDE_COUNT = 2;
-const slides = Array.from(Array(SLIDE_COUNT).keys());
 const RecommendPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
 	const articleList = articleData.map((e, i) => {
@@ -28,12 +25,17 @@ const RecommendPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 				link='https://forms.gle/BW6H5jFXhL5ybeELA'
 				lang={lang}
 			/>
-			<Carousel 
-				lang={lang} 
-				slides={slides} 
-				mediaByIndex={introMediaByIndex}
+			<div className="prize__container">
+			<h2>{!isChinese(lang) ? "限量小禮" : "Limited Prizes"}</h2>
+			<img 
+				className="prize__img" 
+				src={TapeMedia} 
+				alt="tape-pic" 
 			/>
-
+			</div>
+			<p className='prize__name'>
+				{!isChinese(lang) ? "清明上河圖紙膠帶" : "Washi Tape: Along the River During the Qingming Festival"}
+			</p>
 		</main>
 	)
 }

@@ -1,10 +1,6 @@
-import Carousel from './Carousel';
 import SignupButton from '../components/SignupButton';
-import { getArticles, DataWithLang } from '../utils/utils';
-import { introMediaByIndex } from '../sass/scss/images/intro/IntroMedia';
-
-const SLIDE_COUNT = 2;
-const slides = Array.from(Array(SLIDE_COUNT).keys());
+import { getArticles, DataWithLang, isChinese } from '../utils/utils';
+import PinMedia from '../sass/scss/images/workshop/WorkshopMedia';
 
 const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
@@ -28,12 +24,17 @@ const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 				link="https://forms.gle/qgbL88FS6gGWgS8n9" 
 				lang={lang}
 			/>
-			<Carousel 
-				lang={lang} 
-				slides={slides} 
-				mediaByIndex={introMediaByIndex}
+			<div className="prize__container">
+			<h2>{!isChinese(lang) ? "限量小禮" : "Limited Prizes"}</h2>
+			<img 
+				className="prize__img" 
+				src={PinMedia} 
+				alt="pin-pic" 
 			/>
-
+			</div>
+			<p className='prize__name'>
+				{!isChinese(lang) ? "文物造型迴紋針組" : "Antique-shaped Paper Clips"}
+			</p>
 		</main>
 	)
 }
