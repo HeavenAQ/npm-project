@@ -34,9 +34,6 @@ yarn-error.log*
 # testing
 /coverage
 
-#package
-package*
-
 # misc
 .DS_Store
 .env.local
