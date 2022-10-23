@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['python310', 'gcc', 'npm']
+nixPkgs = ['python310', 'gcc', 'nodejs']
 
 [phases.install]
 cmds = ['npm ci', 'python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt']
