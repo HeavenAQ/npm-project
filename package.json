@@ -53,5 +53,9 @@
     "@typescript-eslint/parser": "^5.38.1",
     "eslint": "^8.24.0",
     "file-loader": "^6.2.0"
+  },
+  "engines": {
+	  "node": "18.11.0",
+	  "npm": "8.19.2"
   }
 }
