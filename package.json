@@ -54,5 +54,5 @@
     "@typescript-eslint/parser": "^5.38.1",
     "eslint": "^8.24.0",
     "file-loader": "^6.2.0"
-  },
+  }
 }
