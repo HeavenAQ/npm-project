@@ -2,4 +2,4 @@
 nixPkgs = ["python", "nodejs"]
 
 [phases.install]
-nixPkgs = ['npm ci', 'python ci']
+cmds = ['npm ci', 'python ci']
