@@ -14,9 +14,6 @@ __pycache__
 # testing
 /coverage
 
-# production
-/build
-
 # misc
 .DS_Store
 .env.local
@@ -37,6 +34,8 @@ yarn-error.log*
 # testing
 /coverage
 
+#package
+package*
 
 # misc
 .DS_Store
