@@ -5,4 +5,4 @@ nixPkgs = ['nodejs', 'python310', 'gcc']
 cmds = ['npm ci', 'python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt']
 
 [start]
-cmds = ['gunicorn npm_project.wsgi']
+cmds = ['/.opt/venv/bin/activate && gunicorn npm_project.wsgi']
