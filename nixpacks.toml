@@ -2,4 +2,4 @@
 nixPkgs = ["python", "nodejs"]
 
 [phases.install]
-cmds = ['npm ci', 'python ci']
+cmds = ['npm ci', 'python -m pip install -r requirements.txt']
