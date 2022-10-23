@@ -3,3 +3,6 @@ nixPkgs = ['nodejs', 'python310', 'gcc']
 
 [phases.install]
 cmds = ['npm ci', 'python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt']
+
+[phases.start]
+cmds = ['python manage.py migrate && gunicorn npm_project.wsgi']
