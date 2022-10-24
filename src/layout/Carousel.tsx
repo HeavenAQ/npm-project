@@ -12,12 +12,14 @@ import { isChinese, Language } from "../utils/utils";
 import { Media } from "../sass/scss/images/intro/IntroMedia";
 
 interface Carousel {
+	title: string;
 	slides: ReactNode[];
 	mediaByIndex(i: number): Media;
 	lang: Language;
 }
 
 const Carousel: React.FC<Carousel> = ({
+	title,
 	slides,
 	mediaByIndex,
 	lang,
@@ -73,7 +75,7 @@ const Carousel: React.FC<Carousel> = ({
 	return (
 		<>
 			<div className="embla">
-				<h2>{!isChinese(lang) ? "限量小禮" : "Limited Prizes"}</h2>
+				<h2>{!isChinese(lang) ? title : "Special Prizes"}</h2>
 				<div className="embla__viewport" ref={viewportRef}>
 					<div className="embla__container">{slideContent}</div>
 				</div>

@@ -1,5 +1,6 @@
 import SignupButton from '../components/SignupButton';
-import { getArticles, DataWithLang, isChinese } from '../utils/utils';
+import GiftItem from './GiftItem';
+import { getArticles, DataWithLang } from '../utils/utils';
 import PinMedia from '../sass/scss/images/workshop/WorkshopMedia';
 
 const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
@@ -24,17 +25,13 @@ const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 				link="https://forms.gle/qgbL88FS6gGWgS8n9" 
 				lang={lang}
 			/>
-			<div className="prize__container">
-			<h2>{!isChinese(lang) ? "限量小禮" : "Limited Prizes"}</h2>
-			<img 
-				className="prize__img" 
-				src={PinMedia} 
-				alt="pin-pic" 
+
+			<GiftItem
+				curLang={lang}
+				title={{chn: "小禮品",  eng:"Special Prizes"}}
+				img={PinMedia}
+				item={{chn: "文物造型迴紋針組", eng: "Antique-shaped Paper Clips"}}
 			/>
-			</div>
-			<p className='prize__name'>
-				{!isChinese(lang) ? "文物造型迴紋針組" : "Antique-shaped Paper Clips"}
-			</p>
 		</main>
 	)
 }

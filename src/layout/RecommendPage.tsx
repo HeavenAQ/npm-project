@@ -1,43 +1,37 @@
-import { getArticles, DataWithLang, isChinese } from '../utils/utils';
-import SignupButton from '../components/SignupButton';
-import TapeMedia from '../sass/scss/images/guide/GuideMedia';
-
+import { getArticles, DataWithLang } from "../utils/utils";
+import GiftItem from "./GiftItem";
+import SignupButton from "../components/SignupButton";
+import TapeMedia from "../sass/scss/images/guide/GuideMedia";
 
 const RecommendPage: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleData = getArticles(data);
 	const articleList = articleData.map((e, i) => {
 		return (
 			<div key={i}>
-				<h2 className="secondary__heading">
-					{e.title}
-				</h2>
-				<p>
-					{e.description}
-				</p>
+				<h2 className="secondary__heading">{e.title}</h2>
+				<p>{e.description}</p>
 			</div>
-		)
-	})
+		);
+	});
 
 	return (
-		<main className='content--no-img'>
+		<main className="content--no-img">
 			{articleList}
-			<SignupButton 
-				link='https://forms.gle/BW6H5jFXhL5ybeELA'
+			<SignupButton
+				link="https://forms.gle/BW6H5jFXhL5ybeELA"
 				lang={lang}
 			/>
-			<div className="prize__container">
-			<h2>{!isChinese(lang) ? "限量小禮" : "Limited Prizes"}</h2>
-			<img 
-				className="prize__img" 
-				src={TapeMedia} 
-				alt="tape-pic" 
+			<GiftItem
+				curLang={lang}
+				title={{ eng: "Limited Prizes", chn: "限量小禮" }}
+				img={TapeMedia}
+				item={{
+					chn: "清明上河圖紙膠帶",
+					eng: "Washi Tape: Along the River During the Qingming Festival",
+				}}
 			/>
-			</div>
-			<p className='prize__name'>
-				{!isChinese(lang) ? "清明上河圖紙膠帶" : "Washi Tape: Along the River During the Qingming Festival"}
-			</p>
 		</main>
-	)
-}
+	);
+};
 
 export default RecommendPage;
