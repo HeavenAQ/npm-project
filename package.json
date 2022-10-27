@@ -13,6 +13,7 @@
     "embla-carousel-autoplay": "^7.0.3",
     "embla-carousel-react": "^7.0.3",
     "eslint-plugin-jest": "^27.0.4",
+    "html-react-parser": "^3.0.4",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,7 +30,7 @@
     "build": "react-scripts build --omit=dev",
     "test": "react-scripts test --omit=dev",
     "eject": "react-scripts eject --omit=dev",
-	"postinstall": "npm run build --omit=dev"
+    "postinstall": "npm run build --omit=dev"
   },
   "eslintConfig": {
     "extends": [
