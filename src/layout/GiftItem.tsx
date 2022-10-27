@@ -16,7 +16,8 @@ const GiftItem: React.FC<GiftInfo> = ({curLang, title, item, img}):JSX.Element =
 			<img 
 				className="prize__img" 
 				src={img}
-				alt="pin-pic" 
+				alt="pin-pic"
+				loading='lazy'
 			/>
 			</div>
 			<p className='prize__name'>
