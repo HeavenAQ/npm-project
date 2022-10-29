@@ -14,7 +14,7 @@ const WorkShop: React.FC<DataWithLang> = ({ data, lang }): JSX.Element => {
 	const articleList = articleData.map(
 		(e, i): JSX.Element => {
 			if (!e.description) return <div key="0"></div>;
-			let content = `<p>${e.description}</p>`
+			let content = `<p>${e.description}</p>`;
 			italicStrings.forEach(str => {
 				content = content.replaceAll(str, "<i>$&</i>");
 			})
