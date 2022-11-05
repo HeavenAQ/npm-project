@@ -62,7 +62,7 @@ ROOT_URLCONF = "npm_project.urls"
 
 CACHE = {
     "default": {
-        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
         "LOCATION": [
             "https://npm-nsysu.herokuapp.com/",
             "127.0.0.1:8000",

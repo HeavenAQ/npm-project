@@ -1,8 +1,8 @@
-import media1 from './犧尊.png';
-import media2 from './傘.png';
-import media3 from './文物架.png';
-import media4 from './漁夫帽.png';
-import media5 from './頸枕.png';
+import media1 from './犧尊.webp';
+import media2 from './傘.webp';
+import media3 from './文物架.webp';
+import media4 from './漁夫帽.webp';
+import media5 from './頸枕.webp';
 
 export interface Media {
 	name: string;
