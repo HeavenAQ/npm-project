@@ -10,6 +10,7 @@ const Footer: React.FC = (): JSX.Element => {
 					href="https://www.instagram.com/npm_in_nsysu"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="instagram"
 				>
 					<FaInstagram />
 				</a>
@@ -17,10 +18,14 @@ const Footer: React.FC = (): JSX.Element => {
 					href="https://www.facebook.com/profile.php?id=100085552641657"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="facebook"
 				>
 					<FaFacebook />
 				</a>
-				<a href="mailto:vivianchou900626@gmail.com">
+				<a
+					href="mailto:vivianchou900626@gmail.com"
+					aria-label="facebook"
+				>
 					<GrMail />
 				</a>
 			</div>

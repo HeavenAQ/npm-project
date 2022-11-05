@@ -1,66 +1,67 @@
 .nav {
-	//color
-	backdrop-filter: blur(8px);
+    //color
+    backdrop-filter: blur(8px);
 
-	//display
-	display: flex;
-	align-items: center;
-	column-gap: 2rem;
-	position: fixed;
+    //display
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    position: fixed;
 
-	//position
-	top: 0;
-	left: 50%;
-	z-index: 10;
-	transform: translateX(-50%);
+    //position
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
 
-	//size
-	width: 95%;
-	height: 10vh;
-	padding: 0 15px;
-	border-bottom-right-radius: 0.5rem;
-	border-bottom-left-radius: 0.5rem;
+    //size
+    width: 95%;
+    height: 10vh;
+    padding: 0 15px;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 
-	&__item {
-		cursor: pointer;
-		transition: all 0.2s;
+    &__item {
+        cursor: pointer;
+        transition: all 0.2s;
 
-		&--logo {
-			margin: 0.3rem 0 0 10px;
-			width: 9rem;
-		}
+        &--logo {
+            margin: 0.3rem 0 0 10px;
+            width: 9rem;
+            height: 6.5rem;
+        }
 
-		&:first-child {
-			height: 5.5rem;
-			width: 5.5rem;
-			border-radius: 6rem;
-			margin-right: auto;
-			align-self: center;
-			background-color: $primary-green-light;
-			display: flex;
-			align-items: baseline;
-			justify-content: center;
-		}
+        &:first-child {
+            height: 5.5rem;
+            width: 5.5rem;
+            border-radius: 6rem;
+            margin-right: auto;
+            align-self: center;
+            background-color: $primary-green-light;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
 
-		&:not(:first-child) {
-			padding: 8px;
+        &:not(:first-child) {
+            padding: 8px;
 
-			&:hover {
-				transform: translateY(-3px);
-				border-bottom: 3px solid $font-gray;
-			}
+            &:hover {
+                transform: translateY(-3px);
+                border-bottom: 3px solid $font-gray;
+            }
 
-			&.active {
-				transform: translateY(-1px);
-				color: $primary-main;
-				border-radius: 1rem;
-				background-color: $primary-green-regular;
-				border-bottom: none;
-			}
+            &.active {
+                transform: translateY(-1px);
+                color: $primary-main;
+                border-radius: 1rem;
+                background-color: $primary-green-regular;
+                border-bottom: none;
+            }
 
-			@include respond(tab-land) {
-				display: none;
-			}
-		}
-	}
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
+    }
 }
